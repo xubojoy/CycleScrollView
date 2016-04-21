@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2523BAEE1CC5297900AE0AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BAED1CC5297900AE0AA4 /* AppDelegate.swift */; };
+		2523BAF01CC5297900AE0AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BAEF1CC5297900AE0AA4 /* ViewController.swift */; };
+		2523BAF31CC5297900AE0AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2523BAF11CC5297900AE0AA4 /* Main.storyboard */; };
+		2523BAF51CC5297900AE0AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2523BAF41CC5297900AE0AA4 /* Assets.xcassets */; };
+		2523BAF81CC5297900AE0AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2523BAF61CC5297900AE0AA4 /* LaunchScreen.storyboard */; };
+		2523BB031CC5297900AE0AA4 /* WXCycleScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB021CC5297900AE0AA4 /* WXCycleScrollViewTests.swift */; };
+		2523BB0E1CC5297900AE0AA4 /* WXCycleScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB0D1CC5297900AE0AA4 /* WXCycleScrollViewUITests.swift */; };
+		2523BB1D1CC529C600AE0AA4 /* WXCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB1C1CC529C600AE0AA4 /* WXCycleScrollView.swift */; };
+		2523BB211CC532C100AE0AA4 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2523BB1F1CC532C100AE0AA4 /* 2.png */; };
+		2523BB291CC681E100AE0AA4 /* WXCycleScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB281CC681E100AE0AA4 /* WXCycleScrollViewDelegate.swift */; };
+		2523BB2B1CC6876800AE0AA4 /* WXCycleScrollImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB2A1CC6876800AE0AA4 /* WXCycleScrollImageManager.swift */; };
+		2523BB311CC7C84500AE0AA4 /* WXCycleScrollWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523BB301CC7C84500AE0AA4 /* WXCycleScrollWaveView.swift */; };
+		E724EA801CC74E130042A368 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E724EA7F1CC74E130042A368 /* 1.png */; };
+		E724EA821CC75FE80042A368 /* WXCycleScrollImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724EA811CC75FE80042A368 /* WXCycleScrollImageView.swift */; };
+		E73C91161CC8ECF000C327A6 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = E73C91151CC8ECF000C327A6 /* 3.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2523BAFF1CC5297900AE0AA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2523BAE21CC5297900AE0AA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2523BAE91CC5297900AE0AA4;
+			remoteInfo = WXCycleScrollView;
+		};
+		2523BB0A1CC5297900AE0AA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2523BAE21CC5297900AE0AA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2523BAE91CC5297900AE0AA4;
+			remoteInfo = WXCycleScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2523BAEA1CC5297900AE0AA4 /* WXCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2523BAED1CC5297900AE0AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2523BAEF1CC5297900AE0AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2523BAF21CC5297900AE0AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2523BAF41CC5297900AE0AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2523BAF71CC5297900AE0AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2523BAF91CC5297900AE0AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2523BAFE1CC5297900AE0AA4 /* WXCycleScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXCycleScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2523BB021CC5297900AE0AA4 /* WXCycleScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXCycleScrollViewTests.swift; sourceTree = "<group>"; };
+		2523BB041CC5297900AE0AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2523BB091CC5297900AE0AA4 /* WXCycleScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXCycleScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2523BB0D1CC5297900AE0AA4 /* WXCycleScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXCycleScrollViewUITests.swift; sourceTree = "<group>"; };
+		2523BB0F1CC5297900AE0AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2523BB1C1CC529C600AE0AA4 /* WXCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCycleScrollView.swift; sourceTree = "<group>"; };
+		2523BB1F1CC532C100AE0AA4 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		2523BB281CC681E100AE0AA4 /* WXCycleScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCycleScrollViewDelegate.swift; sourceTree = "<group>"; };
+		2523BB2A1CC6876800AE0AA4 /* WXCycleScrollImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCycleScrollImageManager.swift; sourceTree = "<group>"; };
+		2523BB2C1CC6884200AE0AA4 /* WXCycleScrollView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXCycleScrollView-Bridging-Header.h"; sourceTree = "<group>"; };
+		2523BB301CC7C84500AE0AA4 /* WXCycleScrollWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCycleScrollWaveView.swift; sourceTree = "<group>"; };
+		E724EA7F1CC74E130042A368 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		E724EA811CC75FE80042A368 /* WXCycleScrollImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCycleScrollImageView.swift; sourceTree = "<group>"; };
+		E73C91151CC8ECF000C327A6 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2523BAE71CC5297900AE0AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BAFB1CC5297900AE0AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BB061CC5297900AE0AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2523BAE11CC5297900AE0AA4 = {
+			isa = PBXGroup;
+			children = (
+				2523BAEC1CC5297900AE0AA4 /* WXCycleScrollView */,
+				2523BB011CC5297900AE0AA4 /* WXCycleScrollViewTests */,
+				2523BB0C1CC5297900AE0AA4 /* WXCycleScrollViewUITests */,
+				2523BAEB1CC5297900AE0AA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2523BAEB1CC5297900AE0AA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2523BAEA1CC5297900AE0AA4 /* WXCycleScrollView.app */,
+				2523BAFE1CC5297900AE0AA4 /* WXCycleScrollViewTests.xctest */,
+				2523BB091CC5297900AE0AA4 /* WXCycleScrollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2523BAEC1CC5297900AE0AA4 /* WXCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E724EA7F1CC74E130042A368 /* 1.png */,
+				2523BB1F1CC532C100AE0AA4 /* 2.png */,
+				E73C91151CC8ECF000C327A6 /* 3.png */,
+				2523BB1B1CC529AD00AE0AA4 /* WXCycleScrollView */,
+				2523BAED1CC5297900AE0AA4 /* AppDelegate.swift */,
+				2523BAEF1CC5297900AE0AA4 /* ViewController.swift */,
+				2523BAF11CC5297900AE0AA4 /* Main.storyboard */,
+				2523BAF41CC5297900AE0AA4 /* Assets.xcassets */,
+				2523BAF61CC5297900AE0AA4 /* LaunchScreen.storyboard */,
+				2523BAF91CC5297900AE0AA4 /* Info.plist */,
+			);
+			path = WXCycleScrollView;
+			sourceTree = "<group>";
+		};
+		2523BB011CC5297900AE0AA4 /* WXCycleScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2523BB021CC5297900AE0AA4 /* WXCycleScrollViewTests.swift */,
+				2523BB041CC5297900AE0AA4 /* Info.plist */,
+			);
+			path = WXCycleScrollViewTests;
+			sourceTree = "<group>";
+		};
+		2523BB0C1CC5297900AE0AA4 /* WXCycleScrollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2523BB0D1CC5297900AE0AA4 /* WXCycleScrollViewUITests.swift */,
+				2523BB0F1CC5297900AE0AA4 /* Info.plist */,
+			);
+			path = WXCycleScrollViewUITests;
+			sourceTree = "<group>";
+		};
+		2523BB1B1CC529AD00AE0AA4 /* WXCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2523BB1C1CC529C600AE0AA4 /* WXCycleScrollView.swift */,
+				2523BB281CC681E100AE0AA4 /* WXCycleScrollViewDelegate.swift */,
+				2523BB2A1CC6876800AE0AA4 /* WXCycleScrollImageManager.swift */,
+				2523BB2C1CC6884200AE0AA4 /* WXCycleScrollView-Bridging-Header.h */,
+				E724EA811CC75FE80042A368 /* WXCycleScrollImageView.swift */,
+				2523BB301CC7C84500AE0AA4 /* WXCycleScrollWaveView.swift */,
+			);
+			path = WXCycleScrollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2523BAE91CC5297900AE0AA4 /* WXCycleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2523BB121CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollView" */;
+			buildPhases = (
+				2523BAE61CC5297900AE0AA4 /* Sources */,
+				2523BAE71CC5297900AE0AA4 /* Frameworks */,
+				2523BAE81CC5297900AE0AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WXCycleScrollView;
+			productName = WXCycleScrollView;
+			productReference = 2523BAEA1CC5297900AE0AA4 /* WXCycleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2523BAFD1CC5297900AE0AA4 /* WXCycleScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2523BB151CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollViewTests" */;
+			buildPhases = (
+				2523BAFA1CC5297900AE0AA4 /* Sources */,
+				2523BAFB1CC5297900AE0AA4 /* Frameworks */,
+				2523BAFC1CC5297900AE0AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2523BB001CC5297900AE0AA4 /* PBXTargetDependency */,
+			);
+			name = WXCycleScrollViewTests;
+			productName = WXCycleScrollViewTests;
+			productReference = 2523BAFE1CC5297900AE0AA4 /* WXCycleScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2523BB081CC5297900AE0AA4 /* WXCycleScrollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2523BB181CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollViewUITests" */;
+			buildPhases = (
+				2523BB051CC5297900AE0AA4 /* Sources */,
+				2523BB061CC5297900AE0AA4 /* Frameworks */,
+				2523BB071CC5297900AE0AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2523BB0B1CC5297900AE0AA4 /* PBXTargetDependency */,
+			);
+			name = WXCycleScrollViewUITests;
+			productName = WXCycleScrollViewUITests;
+			productReference = 2523BB091CC5297900AE0AA4 /* WXCycleScrollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2523BAE21CC5297900AE0AA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = WelkinXie;
+				TargetAttributes = {
+					2523BAE91CC5297900AE0AA4 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9W7934AJ9K;
+					};
+					2523BAFD1CC5297900AE0AA4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2523BAE91CC5297900AE0AA4;
+					};
+					2523BB081CC5297900AE0AA4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2523BAE91CC5297900AE0AA4;
+					};
+				};
+			};
+			buildConfigurationList = 2523BAE51CC5297900AE0AA4 /* Build configuration list for PBXProject "WXCycleScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2523BAE11CC5297900AE0AA4;
+			productRefGroup = 2523BAEB1CC5297900AE0AA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2523BAE91CC5297900AE0AA4 /* WXCycleScrollView */,
+				2523BAFD1CC5297900AE0AA4 /* WXCycleScrollViewTests */,
+				2523BB081CC5297900AE0AA4 /* WXCycleScrollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2523BAE81CC5297900AE0AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2523BAF81CC5297900AE0AA4 /* LaunchScreen.storyboard in Resources */,
+				2523BB211CC532C100AE0AA4 /* 2.png in Resources */,
+				2523BAF51CC5297900AE0AA4 /* Assets.xcassets in Resources */,
+				E73C91161CC8ECF000C327A6 /* 3.png in Resources */,
+				2523BAF31CC5297900AE0AA4 /* Main.storyboard in Resources */,
+				E724EA801CC74E130042A368 /* 1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BAFC1CC5297900AE0AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BB071CC5297900AE0AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2523BAE61CC5297900AE0AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2523BB2B1CC6876800AE0AA4 /* WXCycleScrollImageManager.swift in Sources */,
+				2523BAF01CC5297900AE0AA4 /* ViewController.swift in Sources */,
+				2523BAEE1CC5297900AE0AA4 /* AppDelegate.swift in Sources */,
+				E724EA821CC75FE80042A368 /* WXCycleScrollImageView.swift in Sources */,
+				2523BB311CC7C84500AE0AA4 /* WXCycleScrollWaveView.swift in Sources */,
+				2523BB291CC681E100AE0AA4 /* WXCycleScrollViewDelegate.swift in Sources */,
+				2523BB1D1CC529C600AE0AA4 /* WXCycleScrollView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BAFA1CC5297900AE0AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2523BB031CC5297900AE0AA4 /* WXCycleScrollViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2523BB051CC5297900AE0AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2523BB0E1CC5297900AE0AA4 /* WXCycleScrollViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2523BB001CC5297900AE0AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2523BAE91CC5297900AE0AA4 /* WXCycleScrollView */;
+			targetProxy = 2523BAFF1CC5297900AE0AA4 /* PBXContainerItemProxy */;
+		};
+		2523BB0B1CC5297900AE0AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2523BAE91CC5297900AE0AA4 /* WXCycleScrollView */;
+			targetProxy = 2523BB0A1CC5297900AE0AA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2523BAF11CC5297900AE0AA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2523BAF21CC5297900AE0AA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2523BAF61CC5297900AE0AA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2523BAF71CC5297900AE0AA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2523BB101CC5297900AE0AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2523BB111CC5297900AE0AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2523BB131CC5297900AE0AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = WXCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WXCycleScrollView/WXCycleScrollView/WXCycleScrollView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2523BB141CC5297900AE0AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = WXCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WXCycleScrollView/WXCycleScrollView/WXCycleScrollView-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2523BB161CC5297900AE0AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WXCycleScrollView.app/WXCycleScrollView";
+			};
+			name = Debug;
+		};
+		2523BB171CC5297900AE0AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WXCycleScrollView.app/WXCycleScrollView";
+			};
+			name = Release;
+		};
+		2523BB191CC5297900AE0AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WXCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WXCycleScrollView;
+			};
+			name = Debug;
+		};
+		2523BB1A1CC5297900AE0AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WXCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WelkinXie.WXCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WXCycleScrollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2523BAE51CC5297900AE0AA4 /* Build configuration list for PBXProject "WXCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2523BB101CC5297900AE0AA4 /* Debug */,
+				2523BB111CC5297900AE0AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2523BB121CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2523BB131CC5297900AE0AA4 /* Debug */,
+				2523BB141CC5297900AE0AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2523BB151CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2523BB161CC5297900AE0AA4 /* Debug */,
+				2523BB171CC5297900AE0AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2523BB181CC5297900AE0AA4 /* Build configuration list for PBXNativeTarget "WXCycleScrollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2523BB191CC5297900AE0AA4 /* Debug */,
+				2523BB1A1CC5297900AE0AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2523BAE21CC5297900AE0AA4 /* Project object */;
+}
