@@ -13,7 +13,7 @@ let WXCycleScrollViewDownloadPath = (NSSearchPathForDirectoriesInDomains(NSSearc
 
 class WXCycleScrollImageManager: NSObject {
     
-    static func isImageExisted(URLString: String) -> Bool {
+    class func isImageExisted(URLString: String) -> Bool {
         let fileManager = NSFileManager.defaultManager()
         let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(self.imageKey(URLString))
         if fileManager.fileExistsAtPath(imagePath) {
@@ -22,7 +22,7 @@ class WXCycleScrollImageManager: NSObject {
         return false
     }
 
-    static func downloadImage(URLString: String, completion: (image: UIImage) -> Void) {
+    class func downloadImage(URLString: String, completion: (image: UIImage) -> Void) {
         
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(NSURL.init(string: URLString)!, completionHandler: { (data, response, error) in
@@ -50,7 +50,7 @@ class WXCycleScrollImageManager: NSObject {
         task.resume()
     }
     
-    static func imageKey(str: String) -> String {
+    class func imageKey(str: String) -> String {
         let data = (str as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         let result = NSMutableData(length: Int(CC_MD5_DIGEST_LENGTH))
         let resultBytes = UnsafeMutablePointer<CUnsignedChar>(result!.mutableBytes)

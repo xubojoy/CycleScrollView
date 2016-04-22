@@ -30,7 +30,7 @@ class ViewController: UIViewController, WXCycleScrollViewDelegate, UITableViewDe
         else {
             images = [
                 "http://7xneqd.com1.z0.glb.clouddn.com/cycle1.png",
-                "http://7xneqd.com1.z0.glb.clouddn.com/cycle2.jpg",
+                "http://7xneqd.com1.z0.glb.clouddn.com/cycle2.png",
                 "http://7xneqd.com1.z0.glb.clouddn.com/cycle3.png"
             ]
             self.cycleScrollView = WXCycleScrollView.init(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 198), imageURLs: images, placeHolder: UIImage.init(named: "1"))
@@ -53,7 +53,7 @@ class ViewController: UIViewController, WXCycleScrollViewDelegate, UITableViewDe
         } else {
             locate = "Web Image"
         }
-        print(locate + " index " + String(index) + " tapped")
+        print("\(locate) index \(index) tapped.")
     }
     
     // MARK: - UITableView
