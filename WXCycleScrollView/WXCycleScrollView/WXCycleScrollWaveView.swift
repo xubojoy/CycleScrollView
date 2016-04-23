@@ -5,6 +5,8 @@
 //  Created by Welkin Xie on 4/20/16.
 //  Copyright © 2016 WelkinXie. All rights reserved.
 //
+//  Github: https://github.com/WelkinXie/WXCycleScrollView
+//
 
 import UIKit
 
