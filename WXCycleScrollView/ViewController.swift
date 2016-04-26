@@ -14,13 +14,13 @@ class ViewController: UIViewController, WXCycleScrollViewDelegate, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
 
-    var cycleScrollView : WXCycleScrollView?
+    var cycleScrollView: WXCycleScrollView?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let images : [String]
+        let images: [String]
         
         // Local Image
         if self.view.tag == 11 {
@@ -49,7 +49,7 @@ class ViewController: UIViewController, WXCycleScrollViewDelegate, UITableViewDe
     
     // MARK: - WXCycleScrollViewDelegate
     func cycleScrollViewDidTapped(cycleScrollView: WXCycleScrollView, index: Int) {
-        let locate : String
+        let locate: String
         if cycleScrollView.tag == 111 {
             locate = "Local Image"
         } else {

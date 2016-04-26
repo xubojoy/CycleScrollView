@@ -16,11 +16,11 @@ class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
     var waveTime = 1.0
     var waveColor = UIColor.whiteColor().CGColor
     
-    var waveWidth : Double?
-    var waveHeight : Double?
+    var waveWidth: Double?
+    var waveHeight: Double?
     var offsetX = 0.0
-    var waveDisplayLink : CADisplayLink?
-    var waveShapeLayer : CAShapeLayer?
+    var waveDisplayLink: CADisplayLink?
+    var waveShapeLayer: CAShapeLayer?
     
     override init(frame: CGRect) {
         self.waveHeight = Double(frame.size.height / 2)
