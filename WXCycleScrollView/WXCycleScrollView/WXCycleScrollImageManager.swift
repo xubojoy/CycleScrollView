@@ -27,12 +27,12 @@ class WXCycleScrollImageManager: NSObject {
     class func downloadImage(URLString: String, completion: (image: UIImage) -> Void) {
         
         let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(NSURL.init(string: URLString)!, completionHandler: { (data, response, error) in
+        let task = session.dataTaskWithURL(NSURL(string: URLString)!, completionHandler: { (data, response, error) in
             
             if data == nil {
                 return
             }
-            let downloadedImage = UIImage.init(data: data!)
+            let downloadedImage = UIImage(data: data!)
             if downloadedImage == nil {
                 return
             }

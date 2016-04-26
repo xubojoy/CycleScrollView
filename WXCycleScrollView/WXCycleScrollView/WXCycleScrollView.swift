@@ -12,12 +12,12 @@ import UIKit
 
 public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     
-    let scrollView : UIScrollView
-    let pageControl : UIPageControl
-    var delegate : WXCycleScrollViewDelegate?
+    let scrollView: UIScrollView
+    let pageControl: UIPageControl
+    var delegate: WXCycleScrollViewDelegate?
     
-    private var waveView : WXCycleScrollWaveView
-    private var scrollTimer : NSTimer?
+    private var waveView: WXCycleScrollWaveView
+    private var scrollTimer: NSTimer?
     
     var autoScrollTimeInterval = 3.0 {
         didSet(newScrollTime) {
@@ -34,7 +34,7 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     var needWave = true {
         didSet(newNeed) {
             self.waveView.hidden = !self.needWave
-            self.pageControl.frame = CGRectMake(0, CGRectGetHeight(frame) - (self.needWave ? 28 : 20), CGRectGetWidth(frame), 15)
+            self.pageControl.frame = CGRect(x: 0, y: CGRectGetHeight(frame) - (self.needWave ? 28 : 20), width: CGRectGetWidth(frame), height: 15)
         }
     }
     
@@ -64,21 +64,21 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
         for subview in self.scrollView.subviews {
             if subview.isMemberOfClass(UIImageView) {
                 let imageView = subview as! UIImageView
-                imageView.image = UIImage.init(named: imageNames[index])
+                imageView.image = UIImage(named: imageNames[index])
             }
             index += 1
         }
     }
     
     private init(frame: CGRect, imageCount: Int) {
-        self.scrollView = UIScrollView.init(frame: CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)))
-        self.pageControl = UIPageControl.init(frame: CGRectMake(0, CGRectGetHeight(frame) - 28, CGRectGetWidth(frame), 15))
-        self.waveView = WXCycleScrollWaveView.init(frame: CGRectMake(0, CGRectGetHeight(frame) - 9, CGRectGetWidth(frame), 10))
+        self.scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame)))
+        self.pageControl = UIPageControl(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 28, width: CGRectGetWidth(frame), height: 15))
+        self.waveView = WXCycleScrollWaveView(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 9, width: CGRectGetWidth(frame), height: 10))
 
         super.init(frame: frame)
                 
         let width = CGRectGetWidth(frame) * CGFloat(imageCount)
-        let realFrame = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), width, CGRectGetHeight(frame))
+        let realFrame = CGRect(x: CGRectGetMinX(frame), y: CGRectGetMinY(frame), width: width, height: CGRectGetHeight(frame))
         
         self.scrollView.delegate = self
         self.scrollView.contentSize = realFrame.size
@@ -89,13 +89,13 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
         self.pageControl.currentPage = 0
         
         for index in 0 ..< imageCount {
-            let imageFrame = CGRectMake(CGRectGetWidth(frame) * CGFloat(index), 0, CGRectGetWidth(frame), CGRectGetHeight(frame))
-                let imageView = UIImageView.init(frame: imageFrame)
+            let imageFrame = CGRect(x: CGRectGetWidth(frame) * CGFloat(index), y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame))
+                let imageView = UIImageView(frame: imageFrame)
                 imageView.tag = 100 + index
                 imageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
                 imageView.userInteractionEnabled = true
     
-                let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(WXCycleScrollView.imagePressed))
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(WXCycleScrollView.imagePressed))
                 imageView.addGestureRecognizer(tapGesture)
                 
                 self.scrollView.addSubview(imageView)

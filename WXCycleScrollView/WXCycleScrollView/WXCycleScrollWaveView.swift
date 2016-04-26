@@ -40,12 +40,12 @@ class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
         if self.waveShapeLayer != nil {
             return
         }
-        self.waveShapeLayer = CAShapeLayer.init()
+        self.waveShapeLayer = CAShapeLayer()
         self.waveShapeLayer?.fillColor = self.waveColor
         
         self.layer.addSublayer(self.waveShapeLayer!)
         
-        self.waveDisplayLink = CADisplayLink.init(target: self, selector: #selector(currentWave))
+        self.waveDisplayLink = CADisplayLink(target: self, selector: #selector(currentWave))
         self.waveDisplayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,

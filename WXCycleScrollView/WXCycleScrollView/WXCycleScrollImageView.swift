@@ -22,7 +22,7 @@ extension UIImageView {
     
     func setCachedImage(URLString: String) {
         let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(WXCycleScrollImageManager.imageKey(URLString))
-        let imageData = NSData.init(contentsOfFile: imagePath)
-        self.image = UIImage.init(data: imageData!)
+        let imageData = NSData(contentsOfFile: imagePath)
+        self.image = UIImage(data: imageData!)
     }
 }
