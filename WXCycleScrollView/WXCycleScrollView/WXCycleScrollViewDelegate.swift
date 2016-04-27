@@ -12,5 +12,7 @@
 import Foundation
 
 @objc protocol WXCycleScrollViewDelegate {
+    
     optional func cycleScrollViewDidTapped(cycleScrollView: WXCycleScrollView, index: Int)
+
 }

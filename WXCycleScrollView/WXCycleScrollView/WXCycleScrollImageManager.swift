@@ -17,7 +17,7 @@ class WXCycleScrollImageManager: NSObject {
     
     class func isImageExisted(URLString: String) -> Bool {
         let fileManager = NSFileManager.defaultManager()
-        let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(self.imageKey(URLString))
+        let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
         if fileManager.fileExistsAtPath(imagePath) {
             return true
         }
@@ -38,7 +38,7 @@ class WXCycleScrollImageManager: NSObject {
             }
             completion(image: downloadedImage!)
 
-            let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(self.imageKey(URLString))
+            let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
             
             if (!NSFileManager.defaultManager().fileExistsAtPath(WXCycleScrollViewDownloadPath as! String)) {
                 do {
@@ -67,4 +67,5 @@ class WXCycleScrollImageManager: NSObject {
         
         return hash as String
     }
+
 }

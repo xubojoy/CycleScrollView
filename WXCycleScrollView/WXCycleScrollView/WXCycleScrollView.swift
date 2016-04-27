@@ -10,7 +10,7 @@
 
 import UIKit
 
-public class WXCycleScrollView: UIView, UIScrollViewDelegate {
+public class WXCycleScrollView: UIView {
     
     let scrollView: UIScrollView
     let pageControl: UIPageControl
@@ -21,29 +21,28 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     
     var autoScrollTimeInterval = 3.0 {
         didSet(newScrollTime) {
-            self.resetTimer()
+            resetTimer()
         }
     }
     
     var waveColor = UIColor.whiteColor() {
         didSet(newWaveColor) {
-            self.waveView.waveColor = self.waveColor.CGColor
+            waveView.waveColor = waveColor.CGColor
         }
     }
     
     var needWave = true {
         didSet(newNeed) {
-            self.waveView.hidden = !self.needWave
-            self.pageControl.frame = CGRect(x: 0, y: CGRectGetHeight(frame) - (self.needWave ? 28 : 20), width: CGRectGetWidth(frame), height: 15)
+            waveView.hidden = !needWave
+            pageControl.frame = CGRect(x: 0, y: CGRectGetHeight(frame) - (needWave ? 28 : 20), width: CGRectGetWidth(frame), height: 15)
         }
     }
-    
     
     public convenience init(frame: CGRect, imageURLs: Array<String>, placeHolder: UIImage?) {
         self.init(frame: frame, imageCount: imageURLs.count)
         
         var index = 0
-        for subview in self.scrollView.subviews {
+        for subview in scrollView.subviews {
             if subview.isMemberOfClass(UIImageView) {
                 let imageView = subview as! UIImageView
                 if !WXCycleScrollImageManager.isImageExisted(imageURLs[index]) {
@@ -61,7 +60,7 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
         self.init(frame: frame, imageCount: imageNames.count)
         
         var index = 0
-        for subview in self.scrollView.subviews {
+        for subview in scrollView.subviews {
             if subview.isMemberOfClass(UIImageView) {
                 let imageView = subview as! UIImageView
                 imageView.image = UIImage(named: imageNames[index])
@@ -71,22 +70,22 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     }
     
     private init(frame: CGRect, imageCount: Int) {
-        self.scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame)))
-        self.pageControl = UIPageControl(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 28, width: CGRectGetWidth(frame), height: 15))
-        self.waveView = WXCycleScrollWaveView(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 9, width: CGRectGetWidth(frame), height: 10))
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame)))
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 28, width: CGRectGetWidth(frame), height: 15))
+        waveView = WXCycleScrollWaveView(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 9, width: CGRectGetWidth(frame), height: 10))
 
         super.init(frame: frame)
                 
         let width = CGRectGetWidth(frame) * CGFloat(imageCount)
         let realFrame = CGRect(x: CGRectGetMinX(frame), y: CGRectGetMinY(frame), width: width, height: CGRectGetHeight(frame))
         
-        self.scrollView.delegate = self
-        self.scrollView.contentSize = realFrame.size
-        self.scrollView.pagingEnabled = true
-        self.scrollView.showsHorizontalScrollIndicator = false
+        scrollView.delegate = self
+        scrollView.contentSize = realFrame.size
+        scrollView.pagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
         
-        self.pageControl.numberOfPages = imageCount
-        self.pageControl.currentPage = 0
+        pageControl.numberOfPages = imageCount
+        pageControl.currentPage = 0
         
         for index in 0 ..< imageCount {
             let imageFrame = CGRect(x: CGRectGetWidth(frame) * CGFloat(index), y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame))
@@ -98,13 +97,13 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(WXCycleScrollView.imagePressed))
                 imageView.addGestureRecognizer(tapGesture)
                 
-                self.scrollView.addSubview(imageView)
+                scrollView.addSubview(imageView)
         }
-        self.addSubview(self.scrollView)
-        self.addSubview(self.pageControl)
-        self.addSubview(self.waveView)
+        addSubview(scrollView)
+        addSubview(pageControl)
+        addSubview(waveView)
         
-        self.resetTimer()
+        resetTimer()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -112,9 +111,9 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     }
     
     func resetTimer() {
-        self.scrollTimer?.invalidate()
-        self.scrollTimer = NSTimer.scheduledTimerWithTimeInterval(self.autoScrollTimeInterval, target: self, selector: #selector(scrollToNextImage), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(self.scrollTimer!, forMode: NSRunLoopCommonModes)
+        scrollTimer?.invalidate()
+        scrollTimer = NSTimer.scheduledTimerWithTimeInterval(autoScrollTimeInterval, target: self, selector: #selector(scrollToNextImage), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(scrollTimer!, forMode: NSRunLoopCommonModes)
     }
     
     func scrollToNextImage() {
@@ -127,22 +126,25 @@ public class WXCycleScrollView: UIView, UIScrollViewDelegate {
     }
     
     func imagePressed(sender: UITapGestureRecognizer) {
-        self.delegate?.cycleScrollViewDidTapped!(self, index: sender.view!.tag - 100)
+        delegate?.cycleScrollViewDidTapped!(self, index: sender.view!.tag - 100)
     }
+
+}
+
+extension WXCycleScrollView: UIScrollViewDelegate {
     
-    // MARK: - UIScrollViewDelegate
     public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        self.waveView.wave()
-        self.scrollTimer?.invalidate()
+        waveView.wave()
+        scrollTimer?.invalidate()
     }
     
     public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        self.waveView.wave()
+        waveView.wave()
     }
     
     public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        self.pageControl.currentPage = Int(scrollView.contentOffset.x / CGRectGetWidth(self.frame))
-        self.resetTimer()
+        pageControl.currentPage = Int(scrollView.contentOffset.x / CGRectGetWidth(frame))
+        resetTimer()
     }
-
+    
 }

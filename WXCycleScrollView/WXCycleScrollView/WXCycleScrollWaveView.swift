@@ -10,7 +10,8 @@
 
 import UIKit
 
-class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
+class WXCycleScrollWaveView: UIView {
+    
     var waveSpeed = 5.0
     var waveAmplitude = 5.0
     var waveTime = 1.0
@@ -23,8 +24,8 @@ class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
     var waveShapeLayer: CAShapeLayer?
     
     override init(frame: CGRect) {
-        self.waveHeight = Double(frame.size.height / 2)
-        self.waveWidth = Double(frame.size.width)
+        waveHeight = Double(frame.size.height / 2)
+        waveWidth = Double(frame.size.width)
         
         super.init(frame: frame)
     }
@@ -32,21 +33,21 @@ class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.waveHeight = Double(self.frame.size.height / 2)
-        self.waveWidth = Double(self.frame.size.width)
+        waveHeight = Double(frame.size.height / 2)
+        waveWidth = Double(frame.size.width)
     }
     
     func wave() {
-        if self.waveShapeLayer != nil {
+        if waveShapeLayer != nil {
             return
         }
-        self.waveShapeLayer = CAShapeLayer()
-        self.waveShapeLayer?.fillColor = self.waveColor
+        waveShapeLayer = CAShapeLayer()
+        waveShapeLayer?.fillColor = waveColor
         
-        self.layer.addSublayer(self.waveShapeLayer!)
+        layer.addSublayer(waveShapeLayer!)
         
-        self.waveDisplayLink = CADisplayLink(target: self, selector: #selector(currentWave))
-        self.waveDisplayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+        waveDisplayLink = CADisplayLink(target: self, selector: #selector(currentWave))
+        waveDisplayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
             Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
@@ -67,21 +68,22 @@ class WXCycleScrollWaveView: UIView, UIScrollViewDelegate {
     }
     
     func currentWave() {
-        self.offsetX += self.waveSpeed
+        offsetX += waveSpeed
         
         let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 0, CGFloat(self.waveHeight!))
+        CGPathMoveToPoint(path, nil, 0, CGFloat(waveHeight!))
         
         var y = 0.0
-        for x in 0...Int(self.waveWidth!) {
-            let a = Float((360 / Double(self.waveWidth!)) * (Double(x) * M_PI / 180) - self.offsetX * M_PI / 180)
-            y = self.waveAmplitude * Double(sinf(a)) + self.waveHeight!
+        for x in 0...Int(waveWidth!) {
+            let a = Float((360 / Double(waveWidth!)) * (Double(x) * M_PI / 180) - offsetX * M_PI / 180)
+            y = waveAmplitude * Double(sinf(a)) + waveHeight!
             CGPathAddLineToPoint(path, nil, CGFloat(x), CGFloat(y))
         }
-        CGPathAddLineToPoint(path, nil, CGFloat(self.waveWidth!), CGRectGetHeight(self.frame))
-        CGPathAddLineToPoint(path, nil, 0, CGRectGetHeight(self.frame))
+        CGPathAddLineToPoint(path, nil, CGFloat(waveWidth!), CGRectGetHeight(frame))
+        CGPathAddLineToPoint(path, nil, 0, CGRectGetHeight(frame))
         CGPathCloseSubpath(path)
         
-        self.waveShapeLayer?.path = path
+        waveShapeLayer?.path = path
     }
+    
 }
