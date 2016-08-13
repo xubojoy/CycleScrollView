@@ -72,7 +72,7 @@ public class WXCycleScrollView: UIView {
     private init(frame: CGRect, imageCount: Int) {
         scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: CGRectGetWidth(frame), height: CGRectGetHeight(frame)))
         pageControl = UIPageControl(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 28, width: CGRectGetWidth(frame), height: 15))
-        waveView = WXCycleScrollWaveView(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 9, width: CGRectGetWidth(frame), height: 10))
+        waveView = WXCycleScrollWaveView(frame: CGRect(x: 0, y: CGRectGetHeight(frame) - 4, width: CGRectGetWidth(frame), height: 4.5))
 
         super.init(frame: frame)
                 

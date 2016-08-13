@@ -35,8 +35,5 @@
 ## Want the Silk Wave?
 The wave is seperated as a tool kit. Get it here. [WXWaveView](https://github.com/WelkinXie/WXWaveView).
 
-## Thanks
-**WXCycleScrollView** is inspired by [KYWaterWaveView](https://github.com/KittenYang/KYWaterWaveView). Thanks KittenYang and his contributions.
-
 ## License
 **WXCycleScrollView** is released under [**MIT License**](https://github.com/WelkinXie/WXCycleScrollView/blob/master/LICENSE).

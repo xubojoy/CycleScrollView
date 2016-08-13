@@ -12,30 +12,14 @@ import UIKit
 
 class WXCycleScrollWaveView: UIView {
     
-    var waveSpeed = 5.0
-    var waveAmplitude = 5.0
+    var waveSpeed = 1.2
     var waveTime = 1.0
+    var cycleSpeed = 2.0
     var waveColor = UIColor.whiteColor().CGColor
     
-    var waveWidth: Double?
-    var waveHeight: Double?
     var offsetX = 0.0
     var waveDisplayLink: CADisplayLink?
     var waveShapeLayer: CAShapeLayer?
-    
-    override init(frame: CGRect) {
-        waveHeight = Double(frame.size.height / 2)
-        waveWidth = Double(frame.size.width)
-        
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        waveHeight = Double(frame.size.height / 2)
-        waveWidth = Double(frame.size.width)
-    }
     
     func wave() {
         if waveShapeLayer != nil {
@@ -71,15 +55,15 @@ class WXCycleScrollWaveView: UIView {
         offsetX += waveSpeed
         
         let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 0, CGFloat(waveHeight!))
+        CGPathMoveToPoint(path, nil, 0, CGRectGetHeight(frame) / 2)
         
         var y = 0.0
-        for x in 0...Int(waveWidth!) {
-            let a = Float((360 / Double(waveWidth!)) * (Double(x) * M_PI / 180) - offsetX * M_PI / 180)
-            y = waveAmplitude * Double(sinf(a)) + waveHeight!
+        for x in 0...Int(CGRectGetWidth(frame)) {
+            let a = Float(0.01 * cycleSpeed * Double(x) - offsetX * 0.065)
+            y = Double(CGRectGetHeight(frame)) * Double(sinf(a))
             CGPathAddLineToPoint(path, nil, CGFloat(x), CGFloat(y))
         }
-        CGPathAddLineToPoint(path, nil, CGFloat(waveWidth!), CGRectGetHeight(frame))
+        CGPathAddLineToPoint(path, nil, CGRectGetWidth(frame), CGRectGetHeight(frame))
         CGPathAddLineToPoint(path, nil, 0, CGRectGetHeight(frame))
         CGPathCloseSubpath(path)
         

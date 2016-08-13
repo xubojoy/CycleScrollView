@@ -35,8 +35,5 @@
 ## 想单独使用其中的波纹?
 波纹已封装好，可以从这里获取。 [WXWaveView](https://github.com/WelkinXie/WXWaveView).
 
-## 感谢
-**WXCycleScrollView** 是被 [KYWaterWaveView](https://github.com/KittenYang/KYWaterWaveView) 所启发的。 感谢 KittenYang 和他所作出的贡献。
-
 ## 许可协议
 **WXCycleScrollView** 在 [**MIT License**](https://github.com/WelkinXie/WXCycleScrollView/blob/master/LICENSE) 许可协议下发布。
