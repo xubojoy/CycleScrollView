@@ -3,7 +3,7 @@
 ### 类似百度外卖首页带有波纹的自动轮播
 ### [English Doc](https://github.com/WelkinXie/WXCycleScrollView/blob/master/README.md)
 
-![()](http://7xneqd.com1.z0.glb.clouddn.com/cycleScroll.gif)
+![()](http://7xneqd.com1.z0.glb.clouddn.com/cycleScroll2.gif)
 
 ## 使用方法
 1. 复制 **WXCycleScrollView** 文件夹到你的工程目录。
