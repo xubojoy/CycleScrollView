@@ -3,7 +3,7 @@
 ### Auto Scroll View with silk wave on it!
 ### [中文说明](https://github.com/WelkinXie/WXCycleScrollView/blob/master/README-CN.md)
 
-![()](http://7xneqd.com1.z0.glb.clouddn.com/cyclewave.mov.gif)
+![](http://welkin-xie.oss-cn-shenzhen.aliyuncs.com/github/cyclewave.mov.gif)
 
 ## Usage
 1. Copy the **WXCycleScrollView** folder and the files in it to your project.
