@@ -12,7 +12,7 @@ import UIKit
 
 class WXCycleScrollWaveView: UIView {
     
-    var waveSpeed = 1.2
+    var waveSpeed = 7.0
     var waveTime = 1.0
     var cycleSpeed = 2.0
     var waveColor = UIColor.whiteColor().CGColor
@@ -59,7 +59,7 @@ class WXCycleScrollWaveView: UIView {
         
         var y = 0.0
         for x in 0...Int(CGRectGetWidth(frame)) {
-            let a = Float(0.01 * cycleSpeed * Double(x) - offsetX * 0.065)
+            let a = Float(0.01 * (cycleSpeed * Double(x) - offsetX))
             y = Double(CGRectGetHeight(frame)) * Double(sinf(a))
             CGPathAddLineToPoint(path, nil, CGFloat(x), CGFloat(y))
         }
