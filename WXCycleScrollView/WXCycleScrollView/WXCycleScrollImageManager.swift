@@ -11,13 +11,13 @@
 import Foundation
 import UIKit
 
-let WXCycleScrollViewDownloadPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as AnyObject).stringByAppendingPathComponent("WXCycleScrollViewCache") as AnyObject
+let kWXCycleScrollViewDownloadPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as AnyObject).stringByAppendingPathComponent("com.welkinx.WXCycleScrollViewCache") as AnyObject
 
 class WXCycleScrollImageManager: NSObject {
     
     class func isImageExisted(URLString: String) -> Bool {
         let fileManager = NSFileManager.defaultManager()
-        let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
+        let imagePath = kWXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
         if fileManager.fileExistsAtPath(imagePath) {
             return true
         }
@@ -38,11 +38,11 @@ class WXCycleScrollImageManager: NSObject {
             }
             completion(image: downloadedImage!)
 
-            let imagePath = WXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
+            let imagePath = kWXCycleScrollViewDownloadPath.stringByAppendingPathComponent(imageKey(URLString))
             
-            if (!NSFileManager.defaultManager().fileExistsAtPath(WXCycleScrollViewDownloadPath as! String)) {
+            if (!NSFileManager.defaultManager().fileExistsAtPath(kWXCycleScrollViewDownloadPath as! String)) {
                 do {
-                    try NSFileManager.defaultManager().createDirectoryAtPath(WXCycleScrollViewDownloadPath as! String, withIntermediateDirectories: false, attributes: nil)
+                    try NSFileManager.defaultManager().createDirectoryAtPath(kWXCycleScrollViewDownloadPath as! String, withIntermediateDirectories: false, attributes: nil)
                 } catch {
                     return
                 }
